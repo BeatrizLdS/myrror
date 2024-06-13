@@ -10,6 +10,4 @@ import Foundation
 import CoreData
 
 @objc(Reflection)
-public class Reflection: NSManagedObject {
-
-}
+public class Reflection: NSManagedObject { }

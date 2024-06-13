@@ -53,20 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B4B7E8628D9FE3D004F2906 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 51BA97E8B5085EFFB47BC9C0B785CEA7;
-			remoteInfo = "lottie-ios";
-		};
-		0B4B7E8828D9FE3D004F2906 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D85DD9D7B233037CEE3C827B44259E8B;
-			remoteInfo = "Pods-Myrror";
-		};
 		14DE6D2A28D398CB007DDC98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B45265128CA0EEA00D4083C /* Project object */;
@@ -129,7 +115,7 @@
 		ED55FE4F28D4BB3200715D6F /* ReflectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReflectionViewModel.swift; path = Myrror/ReflectionViewModel.swift; sourceTree = SOURCE_ROOT; };
 		ED55FE5728D4BE5800715D6F /* ReflectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionModel.swift; sourceTree = "<group>"; };
 		ED75100628D22268000207F2 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
-		FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		FF5EF8C228D342AB00C6DEA8 /* MyrrorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyrrorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9283DF28E5199A00A2D142 /* SaveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButtonView.swift; sourceTree = "<group>"; };
 		FF9283E128E51AFD00A2D142 /* sucess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sucess.json; sourceTree = "<group>"; };
@@ -194,18 +180,11 @@
 		0B45265B28CA0EEA00D4083C /* Myrror */ = {
 			isa = PBXGroup;
 			children = (
-				14BF425B28DB353D0080294C /* Assets */,
-				FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */,
-				0B9F82C028D355CF000D848B /* Helpers */,
-				0B45267328CA292A00D4083C /* ViewModel */,
-				0B45267228CA292200D4083C /* View */,
-				0B45267128CA291700D4083C /* Model */,
-				0B45265C28CA0EEA00D4083C /* AppDelegate.swift */,
-				0B45265E28CA0EEA00D4083C /* SceneDelegate.swift */,
-				0B45266728CA0EEC00D4083C /* LaunchScreen.storyboard */,
-				ED55FE4828D4B9AB00715D6F /* MyrrorData.xcdatamodeld */,
 				0B45266A28CA0EEC00D4083C /* Info.plist */,
-				0B45266528CA0EEC00D4083C /* Assets.xcassets */,
+				5488A5802C1B39DA0031CCAC /* App */,
+				5488A5832C1B39E90031CCAC /* Source */,
+				5488A5842C1B3A2B0031CCAC /* Resources */,
+				14BF425B28DB353D0080294C /* Assets */,
 				0B4B7EED28DB30DB004F2906 /* MyrrorUITests */,
 				0B4B7EE228DB30D1004F2906 /* MyrrorTests */,
 			);
@@ -215,6 +194,7 @@
 		0B45267128CA291700D4083C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED55FE4828D4B9AB00715D6F /* MyrrorData.xcdatamodeld */,
 				ED55FE5728D4BE5800715D6F /* ReflectionModel.swift */,
 			);
 			path = Model;
@@ -236,16 +216,8 @@
 			children = (
 				ED55FE4F28D4BB3200715D6F /* ReflectionViewModel.swift */,
 			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0B4B7E7628D9FE18004F2906 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0B4B7E8728D9FE3D004F2906 /* lottie-ios */,
-				0B4B7E8928D9FE3D004F2906 /* Pods-Myrror */,
-			);
-			name = Products;
+			name = ViewModel;
+			path = ../ViewModel;
 			sourceTree = "<group>";
 		};
 		0B4B7E7828D9FE18004F2906 /* Recovered References */ = {
@@ -329,6 +301,36 @@
 				14BF426628DB353D0080294C /* confiante-cinza.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		5488A5802C1B39DA0031CCAC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0B45265C28CA0EEA00D4083C /* AppDelegate.swift */,
+				0B45265E28CA0EEA00D4083C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5488A5832C1B39E90031CCAC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0B45267228CA292200D4083C /* View */,
+				0B45267128CA291700D4083C /* Model */,
+				0B45267328CA292A00D4083C /* ViewModel */,
+				0B9F82C028D355CF000D848B /* Helpers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5488A5842C1B3A2B0031CCAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */,
+				0B45266728CA0EEC00D4083C /* LaunchScreen.storyboard */,
+				0B45266528CA0EEC00D4083C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FF9283DE28E5197500A2D142 /* SetReflectionViewController */ = {
@@ -433,12 +435,6 @@
 			mainGroup = 0B45265028CA0EEA00D4083C;
 			productRefGroup = 0B45265A28CA0EEA00D4083C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0B4B7E7628D9FE18004F2906 /* Products */;
-					ProjectRef = FF5EF8B028D3417D00C6DEA8 /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0B45265828CA0EEA00D4083C /* Myrror */,
@@ -447,25 +443,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0B4B7E8728D9FE3D004F2906 /* lottie-ios */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "lottie-ios";
-			path = Lottie.framework;
-			remoteRef = 0B4B7E8628D9FE3D004F2906 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B4B7E8928D9FE3D004F2906 /* Pods-Myrror */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-Myrror";
-			path = Pods_Myrror.framework;
-			remoteRef = 0B4B7E8828D9FE3D004F2906 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0B45265728CA0EEA00D4083C /* Resources */ = {
