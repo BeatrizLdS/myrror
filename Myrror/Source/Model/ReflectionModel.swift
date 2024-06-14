@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ReflectionModel{
-    let subject : String
-    let text_reflection : String
-    let emoji : String
-    let date : Date
-}
+//struct ReflectionModel{
+//    let subject : String
+//    let text_reflection : String
+//    let emoji : String
+//    let date : Date
+//}
 
 //enum Subject: String {
 //    case learned = "O que aprendi"

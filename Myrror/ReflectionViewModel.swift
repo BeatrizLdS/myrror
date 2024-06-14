@@ -19,19 +19,13 @@ class ReflectionViewModel: ObservableObject {
     
     //    MARK: CREATE
     func addReflection(date: Date, subject: String, textoReflection: String, emoji: String) {
-        let newReflection = Reflection(context: self.context)
+        let newReflection = Reflection.create()
         newReflection.date = date
         newReflection.subject = subject
         newReflection.text_reflection = textoReflection
         newReflection.emoji = emoji
         
-        do {
-            try self.context.save()
-            reflectionList?.append(newReflection)
-            print("Deucertoooo \(newReflection)")
-        } catch {
-            print("deu errado")
-        }
+        reflectionList?.append(newReflection)
     }
     
     // MARK: Update
@@ -40,41 +34,22 @@ class ReflectionViewModel: ObservableObject {
         reflection.subject = subject
         reflection.text_reflection = text
         reflection.emoji = emoji
-        do {
-            try self.context.save()
-        } catch {
-            print("Deu errado atualizar")
-        }
     }
     
     // MARK: READ
     func fetchReflection(date: Date) {
-        let fetchRequest = Reflection.fetchRequest()
-        
         let startDate = Calendar.current.startOfDay(for: date)
         var components = DateComponents()
         components.day = 1
         components.second = -1
         let endDate = Calendar.current.date(byAdding: components, to: startDate)!
-        fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date <= %@",
-                                             startDate as NSDate, endDate as NSDate)
-        do {
-            self.reflectionList = try context.fetch(fetchRequest)
-        } catch {
-            print("deu errado")
-        }
+        self.reflectionList = Reflection.find(query: "date >= %@ AND date <= %@", arguments: [startDate as NSDate, endDate as NSDate])
     }
     
     func deleteReflection(indexPath: IndexPath) {
         guard let reflectionList = self.reflectionList else {
             return
         }
-        do {
-            context.delete(reflectionList[indexPath.row])
-            self.reflectionList?.remove(at: indexPath.row)
-            try self.context.save()
-        } catch {
-            print("deu errado")
-        }
+        reflectionList[indexPath.row].destruct()
     }
 }

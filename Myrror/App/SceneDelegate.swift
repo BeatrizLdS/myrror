@@ -22,4 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         window.overrideUserInterfaceStyle = .dark
     }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        CoreDataStack.shared.saveContext()
+    }
 }
